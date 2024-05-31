@@ -1,0 +1,52 @@
+#include<iostream>
+using namespace std;
+void clock(int arr[][100],int r,int c){
+	int d=r*c;
+	int k=0;
+	int ar[d];
+	while(k<d){
+	    for(int i=0;i<c;i++){
+		    for(int j=r-1;j>=0;j--){
+			    ar[k]=arr[j][i];
+			    k++;
+		    }
+	    }
+	}
+	
+	cout<<"After 90 degree rotation , your array becomes "<<endl;
+	int e=0;
+	while(e<d){
+		for(int i=0;i<c;i++){
+		    for(int j=0;j<r;j++){
+			    cout<<ar[e]<<" ";
+			    e++;
+		    }
+		    cout<<endl;
+	    }
+	}
+}
+int main(){
+    int r,c;
+    cout<<"Enter the number of rows :";
+    cin>>r;
+    cout<<"\nEnter the number of columns :";
+    cin>>c;
+    int d=r*c;
+	int arr[100][100];
+	cout<<"Enter the arrays "<<endl;
+	for(int a=0;a<r;a++){
+	    for(int b=0;b<c;b++){
+	      cin>>arr[a][b];  
+	    }
+	}
+	cout<<"Your origional array is "<<endl;
+	for(int i=0;i<r;i++){
+		    for(int j=0;j<c;j++){
+			    cout<<arr[i][j]<<" ";
+		    }
+		    cout<<endl;
+	    }
+	clock(arr,r,c);
+	    
+	return 0;
+}
