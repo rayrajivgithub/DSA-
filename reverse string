@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+void reverse(char name[]){
+    int c=0;
+    for(int i=0;name[i]!='\0';i++){
+        c++;
+    }
+    char naam[20];
+    for(int j=c-1;j>=0;j--){
+        naam[j]=name[j];
+        cout<<naam[j];
+    }
+}
+
+int main() {
+    char name[20];
+    cout<<"Enter your name :"<<endl;
+    cin>>name;
+    cout<<"Your name is "<<name<<endl;
+    cout<<"Reverse of your name is ";
+    reverse(name);
+
+    return 0;
+}
