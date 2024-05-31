@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+void selection(int arr[], int n){
+    for(int i=0;i<n-1;i++){
+        int min=i;
+        for( int j=i+1;j<n;j++){
+            if(arr[j]<arr[min]){
+                min=j;
+            }
+        }
+        swap(arr[min],arr[i]);
+    }
+    for( int k=0;k<n;k++){
+        cout<<arr[k]<< " ";
+    }
+    
+}
+int main(){
+    int arr[10]={10,54,78,25,1,69,51,99,2,7};
+    selection(arr,10);
+    return 0;
+}
