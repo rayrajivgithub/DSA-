@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+void reverse(int arr[],int n){
+    int s=4;
+    int e=n-1;
+    while(s<=e){
+        swap(arr[s],arr[e]);
+        s++;
+        e--;
+    }
+    for(int k=0;k<n;k++){
+        cout<<arr[k]<< " ";
+    }
+}
+
+int main() {
+    int arr[9]={1,2,3,4,5,6,7,8,9};
+    reverse(arr,9);
+
+    return 0;
+}
