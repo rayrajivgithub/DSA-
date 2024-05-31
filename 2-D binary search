@@ -1,0 +1,52 @@
+#include<iostream>
+using namespace std;
+void bsearch(int arr[][100],int r,int c,int key){
+	int s=0;
+	int e=s*e-1;
+	int mid=s+(e-s)/2;
+	int g;
+	while(s<=e){
+		int element=arr[mid/c][mid%c];
+		if(key==element){
+	 		cout<<"Element found at index :"<<mid;
+		}
+		if(key>element){
+			s=mid+1;
+		}
+		else{
+			e=mid-1;
+		}
+		mid=s+(e-s)/2;
+		
+	}
+
+	
+}
+int main(){
+    int r,c;
+    cout<<"Enter the number of rows :";
+    cin>>r;
+    cout<<"\nEnter the number of columns :";
+    cin>>c;
+    int d=r*c;
+	int arr[100][100];
+	cout<<"Enter the arrays "<<endl;
+	for(int a=0;a<r;a++){
+	    for(int b=0;b<c;b++){
+	      cin>>arr[a][b];  
+	    }
+	}
+	cout<<"Your origional array is "<<endl;
+	for(int i=0;i<r;i++){
+		    for(int j=0;j<c;j++){
+			    cout<<arr[i][j]<<" ";
+		    }
+		    cout<<endl;
+	    }
+	    int key;
+	    cout<<"Enter the element to be searched for :";
+	    cin>>key;
+	bsearch(arr,r,c,key);
+	    
+	return 0;
+}
