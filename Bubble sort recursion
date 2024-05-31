@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+void bubblesort(int *arr,int s ){
+    if(s==1 || s==0){
+        return ;
+    }
+    for(int i=0;i<s-1;i++){
+        if(arr[i]>arr[i+1]){
+            swap(arr[i],arr[i+1]);
+        }
+    }
+    bubblesort(arr,s-1);
+}
+
+int main() {
+	int size;
+	cout<<"Enter the size of the array :";
+	cin>>size;
+	int &si=size;
+    int arr[si];
+    cout<<"\nEnter the arrays :";
+    for(int i=0;i<si;i++){
+    	cin>>arr[i];
+	}
+	cout<<"\nYour array is "<<endl<<endl;
+	for(int i=0;i<si;i++){
+    	cout<<arr[i]<<" ";
+	}
+	bubblesort(arr,si);
+    cout<<"\nYour sorted array is"<<endl;
+    for(int i=0;i<si;i++){
+    	cout<<arr[i]<<" ";
+    }
+   
+    
+
+    return 0;
+}
