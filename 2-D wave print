@@ -1,0 +1,36 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+int main(){
+	int arr[3][3];
+	cout<<"Enter the values : "<<endl;
+	for(int i=0;i<3;i++){
+		for(int j=0;j<3;j++){
+			cin>>arr[i][j];
+		}
+	}
+	cout<<"your matrix is :"<<endl;
+		for(int col=0;col<3;col++){
+			for(int row=0;row<3;row++){
+				cout<<arr[col][row]<<" ";
+			}
+			cout<<endl;
+		}
+		cout<<"\n Your wave print is : "<<endl;
+	for(int k=0;k<3;k++){
+		if(k%2!=0){
+			for(int l=2;l>=0;l--){
+				cout<<arr[l][k]<<" ";
+			}
+		}
+		else{
+			for(int l=0;l<3;l++){
+				cout<<arr[l][k]<<" ";
+			}
+		}	
+	}
+
+
+
+	return 0;
+}
