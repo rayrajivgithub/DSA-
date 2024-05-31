@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+bool search(int *arr,int size,int key){
+
+	if(arr[0]==key){
+		return true;
+	}
+	search(arr+1,size-1,key);
+}
+
+
+int main(){
+	int arr[10]={2,8,10,15,33,89,91,105,108,114};
+	int key;
+	cout<<"Enter the number to be searched for :";
+	cin>>key;
+	int ans=search(arr,9,key);
+	cout<<"key is present or not :"<<ans;
+	return 0;
+}
