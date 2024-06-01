@@ -19,8 +19,6 @@ void bsearch(int arr[][100],int r,int c,int key){
 		mid=s+(e-s)/2;
 		
 	}
-
-	
 }
 int main(){
     int r,c;
